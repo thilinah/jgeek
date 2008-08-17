@@ -321,6 +321,13 @@ public class JCageConfigurator {
     public void startNewGame(GameProxy gp) {
         currentProxy = gp;
         Enumeration en = buildings.keys();
+        loadBuildingDataToEachUser(gp);
+        loadResourceDataToEachUser(gp);
+
+    }
+
+    private void loadBuildingDataToEachUser(GameProxy gp) {
+        Enumeration en = buildings.keys();
         while (en.hasMoreElements()) {
             Object o = en.nextElement();
             Building b = (Building) buildings.get(o);
@@ -334,7 +341,23 @@ public class JCageConfigurator {
             }
             System.out.println(o + " " + b.getId());
         }
+    }
 
+     private void loadResourceDataToEachUser(GameProxy gp) {
+        Enumeration en = resources.keys();
+        while (en.hasMoreElements()) {
+            Object o = en.nextElement();
+            Resource b = (Resource) resources.get(o);
+            gp.getResources().put((String)o, b);
+            Enumeration en1 = gp.getPlayers().keys();
+            while (en1.hasMoreElements()) {
+                String key = (String) en1.nextElement();
+                ((Player) gp.getPlayers().get(key)).getResources().put((String)o, b);
+                System.out.println(o + " " + b.getId());
+
+            }
+            System.out.println(o + " " + b.getId());
+        }
     }
 
     public void startGameTimer() {
