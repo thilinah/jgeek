@@ -1,0 +1,853 @@
+/**
+  * The polish.css files contains all
+  * design information about a project.
+  * It can be adjusted for specific devices
+  * or device groups by putting it in the
+  * appropriate sub-folder.
+  * If you want to adjust a design for all
+  * Nokia devices, define it in "resources/Nokia/polish.css"
+  * and so on. Only new and different settings
+  * need to be specified in such polish.css files.
+  */
+
+/**
+  * the colors which are defined in
+  * the colors section can later be referenced.
+  * This makes changes easy, since the color
+  * just needs to be changed in one position.
+  * Even default colors (like blue, green, lime, etc)
+  * can be changed here.
+  */
+colors {
+	bgColor:  rgb(132,143,96);
+	brightBgColor:  rgb(238,241,229);
+	brightFontColor: rgb(238,241,229);
+	fontColor: rgb( 30, 85, 86 );
+    fontColorTicker: #222;
+	fontShadowColor: #fff;
+}
+
+/**
+  * the menu style is a predefined style for
+  * designing the fullscreen-menu.
+  * The font-settings (font-color,
+  * font-face, font-style and font-size)
+  * are used to design the menu-texts
+  * (like Options, Select, or Cancel).
+  * With the focused-style attribute
+  * another style than the default "focused"
+  * style is used for the menu.
+  * The menubar-color can be set to any
+  * color. When "transparent" is used,
+  * the background shines through.
+  */
+menu {
+	margin-left: 2;
+	padding: 2;
+	background {
+		type: round-rect;
+		color: brightBgColor;
+		border-width: 2;
+		border-color: bgColor;
+	}
+	focused-style: .menuFocused;
+	font-color: brightFontColor;
+	font-style: bold;
+	menubar-color: bgColor;
+}
+
+/**
+  * The menuItem style is a predefined style
+  * for the actual commands in a fullscreen-menu.
+  * When the menuItem style is not defined,
+  * the menu style will be used instead.
+  */
+menuItem {
+	margin-top: 2;
+	padding: 2;
+	padding-left: 5;
+	font {
+		color: fontColor;
+		size: medium;
+		style: bold;
+	}
+	layout: left;
+}
+
+/**
+  * This is a custom style for selected
+  * menu items. It is used, because it has
+  * been defined in the menu style.
+  */
+.menuFocused extends .menuItem {
+	background-color: bgColor;
+	font-color: brightFontColor;
+	layout: left | horizontal-expand;
+}
+
+/**
+  * The title style is a predefined style which is used
+  * for all screen-titles.
+  */
+title {
+	padding: 2;
+	margin-top: 0;
+	margin-bottom: 5;
+	margin-left: 0;
+	margin-right: 0;
+	font-face: proportional;
+	font-size: large;
+	font-style: bold;
+    /*font-bitmap:pa12;*/
+    font-color: brightFontColor;
+	background-color: bgColor;
+	border: none;
+	layout: horizontal-center | horizontal-expand;
+}
+
+/**
+  * The focused style is a predefined style which
+  * is used by lists, forms, choice-groups and so on.
+  * This style will be used for highlighting the currently
+  * focused item.
+  */
+focused {
+	padding: 5;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: brightBgColor;
+		/*border-color: fontColor;*/
+		border-width: 2;
+	}
+	font {
+		style: bold;
+        /*bitmap:pa13;*/
+        color: fontColor;
+		size: small;
+	}
+	layout: expand | center;
+}
+
+/**
+  * The .mainScreen style is a static style, which
+  * is set in the MIDlet source-code with the //#style directive.
+  * If the source-code would not have defined this
+  * style, we could use the dynamic style "list" to design all
+  * list-screens.
+  * An interesting attribute is the "columns" attribute which
+  * is used to use a table with two columns instead of the default
+  * layout.
+  */
+.mainScreen {
+	/*padding: 5;*/
+	/*padding-left: 15;*/
+	/*padding-right: 15;*/
+	/*background {*/
+		/*color: brightBgColor;*/
+	/*}*/
+	/*layout: horizontal-expand | horizontal-center | vertical-center;*/
+	/*columns: 2;*/
+	/*columns-width: equal;*/
+	/*show-text-in-title: true;*/
+    padding: 5;
+    padding-left: 15;
+    padding-right: 15;
+    font-bitmap:pa10;
+    focused-style: .mainScreenFocuse;
+    background {
+        color: brightBgColor;
+    }
+
+    /*focused-style: .slistitem;*/
+    layout: expand | left;
+    columns: 1;
+}
+
+/**
+  * The .mainCommand style is also a static style, which
+  * is set in the MIDlet source-code with the //#style directive.
+  * If the source-code would not have defined this
+  * style, we could use the dynamic style "listitem" to design all
+  * items on the list-screens.
+  * An interesting attribute is the "icon-image" URL, which uses
+  * the %INDEX% keyword. The first list-item will use the image
+  * "icon0.png", the second "icon1.png" and so on.
+  */
+.mainCommand {
+	margin: 2;
+	padding: 5;
+	background: none;
+    font {
+		style: bold;
+        bitmap:pa12;
+        color: fontColor;
+		size: medium;
+	}
+	layout: center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+}
+
+.mainScreenFocuse{
+	padding: 5;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: brightBgColor;
+		/*border-color: fontColor;*/
+		border-width: 0;
+	}
+	font {
+		style: bold;
+        bitmap:pa12;
+        color: fontColor;
+		size: small;
+	}
+	layout: expand | left;
+}
+
+
+
+.mainScreenE {
+	/*padding: 5;*/
+	/*padding-left: 15;*/
+	/*padding-right: 15;*/
+	/*background {*/
+		/*color: brightBgColor;*/
+	/*}*/
+	/*layout: horizontal-expand | horizontal-center | vertical-center;*/
+	/*columns: 2;*/
+	/*columns-width: equal;*/
+	/*show-text-in-title: true;*/
+    padding: 5;
+    padding-left: 15;
+    padding-right: 15;
+    /*focused-style: .mainScreenFocuseE;*/
+    background {
+        color: brightBgColor;
+    }
+
+    /*focused-style: .slistitem;*/
+    layout: expand | left;
+    columns: 1;
+}
+
+
+.mainScreenES {
+    padding: 5;
+    padding-left: 15;
+    padding-right: 15;
+    /*focused-style: .mainScreenFocuseES;*/
+    background {
+        color: brightBgColor;
+    }
+    /*focused-style: .slistitem;*/
+    layout: expand | left;
+    columns: 1;
+}
+
+
+
+.mainScreenF {
+    padding: 5;
+    padding-left: 1;
+    padding-right: 1;
+    background {
+        color: brightBgColor;
+    }
+    layout: left;
+    font-size: medium;
+    layout: expand | left;
+    columns: 1;
+}
+
+.mainCommandF {
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+    focused-style: .mainCommandFF;
+
+}
+
+.mainCommandFF {
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+
+}
+
+
+.mainCommandFS {
+    font-bitmap:pa10;
+    padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+    focused-style: .mainCommandFFS;
+}
+
+.mainCommandFFS {
+    font-bitmap:pa10;
+    padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+}
+
+/**
+  * The .mainCommand style is also a static style, which
+  * is set in the MIDlet source-code with the //#style directive.
+  * If the source-code would not have defined this
+  * style, we could use the dynamic style "listitem" to design all
+  * items on the list-screens.
+  * An interesting attribute is the "icon-image" URL, which uses
+  * the %INDEX% keyword. The first list-item will use the image
+  * "icon0.png", the second "icon1.png" and so on.
+  */
+.mainCommandE {
+	margin: 2;
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+    focused-style: .mainScreenFocuseE;
+
+}
+
+.mainScreenFocuseE{
+	padding: 5;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: brightBgColor;
+		/*border-color: fontColor;*/
+		border-width: 0;
+	}
+	font {
+		style: bold;
+        color: fontColor;
+		size: medium;
+	}
+	layout: expand | left;
+}
+
+.mainCommandES {
+    font-bitmap:pa10;
+    margin: 2;
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+    focused-style: .mainScreenFocuseES;
+}
+
+.mainScreenFocuseES{
+    font-bitmap:pa10;
+
+    padding: 5;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: brightBgColor;
+		/*border-color: fontColor;*/
+		border-width: 0;
+	}
+	font {
+		style: bold;
+        color: fontColor;
+		size: medium;
+	}
+	layout: expand | left;
+}
+
+
+.mainScreenG {
+    padding: 5;
+    padding-left: 1;
+    padding-right: 1;
+    background {
+        color: brightBgColor;
+    }
+    layout: left;
+    font-size: medium;
+    /*focused-style: .mainCommandFocusG;*/
+    layout: expand | left;
+    columns: 1;
+}
+
+.mainCommandG {
+	padding: 5;
+	background: none;
+    font-style: bold;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+    focused-style: .mainCommandFocusG;
+}
+
+
+
+
+
+.mainCommandFocusG {
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: large;
+    font-style: bold;
+    layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+}
+
+.mainScreenGS {
+    padding: 5;
+    padding-left: 1;
+    padding-right: 1;
+    background {
+        color: brightBgColor;
+    }
+    layout: left;
+    font-size: medium;
+    /*focused-style: .mainCommandFocusGS;*/
+    layout: expand | left;
+    columns: 1;
+}
+
+
+.mainCommandGS {
+    font-bitmap:pa09;
+
+    padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+    focused-style: .mainCommandFocusGS;
+
+}
+
+.mainCommandFocusGS {
+    font-bitmap:pa10;
+
+    padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+    font-style: bold;
+    layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | left;
+}
+
+
+
+
+.mainScreenK {
+    padding: 5;
+        padding-left: 15;
+        padding-right: 15;
+        background {
+            color: brightBgColor;
+        }
+        font-color: fontColor;
+        font-style: bold;
+        font-size: medium;
+        layout: horizontal-expand | horizontal-center;
+        columns: 2;
+        columns-width: equal;
+        focused-style: .mainCommandK;
+
+}
+
+.mainCommandK {
+        padding: 5;
+        background: none;
+        font-color: fontColor;
+        font-style: bold;
+        font-size: medium;
+        layout: center;
+        icon-image-align: top;
+
+}
+
+
+
+
+
+.mainCommandFocusK {
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+    font-style: bold;
+    layout: center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: top;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: expand | top;
+}
+
+
+
+
+
+
+.ticker {
+	ticker-step: 3;
+	padding-horizontal: 5;
+	layout: vertical-center;
+    /*font-bitmap:pa12;*/
+    /*icon-image: url( sending.png );*/
+	/*font-color: fontColorTicker;*/
+	/*font-size: medium;*/
+    /*text-effect: shadow; */
+	/*text-shadow-color: fontShadowColor;*/
+    font {
+		style: bold;
+        color: fontColor;
+		size: large;
+	}
+}
+
+.tickerS {
+	ticker-step: 3;
+	padding-horizontal: 5;
+	layout: vertical-center;
+    /*font-bitmap:pa12;*/
+    /*icon-image: url( sending.png );*/
+	/*font-color: fontColorTicker;*/
+	/*font-size: medium;*/
+    /*text-effect: shadow; */
+	/*text-shadow-color: fontShadowColor;*/
+    font {
+		style: bold;
+        bitmap:pa12;
+        color: fontColor;
+		size: small;
+	}
+}
+
+
+
+.input {
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: left;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: left;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+
+    layout: expand | left;
+}
+
+.can{
+	font{
+		style: bold;
+        bitmap:pa12;
+        color: fontColor;
+		size: small;
+	}
+}
+
+.LabE {
+    font-color: fontColor;
+	font-size: medium;
+	/*layout: center;*/
+    /*layout: expand | left;*/
+}
+
+.LabES {
+    font-bitmap:pa10;
+   font-color: fontColor;
+	font-size: medium;
+	/*layout: center;*/
+    /*layout: expand | left;*/
+}
+
+.LabBigE {
+    font-color: fontColor;
+	font-size: large;
+	/*layout: center;*/
+    /*layout: expand | left;*/
+}
+
+.LabBigES {
+    font-bitmap:pa12;
+   font-color: fontColor;
+	font-size: medium;
+	/*layout: center;*/
+    /*layout: expand | left;*/
+}
+
+
+/*=================================================*/
+.mainScreenMsg {
+    padding: 5;
+    padding-left: 1;
+    padding-right: 1;
+    background {
+        color: brightBgColor;
+    }
+    font-size: medium;
+    /*focused-style: .mainCommandFocusMsg;*/
+    layout: horizontal-expand | horizontal-center;
+    columns: 1;
+}
+
+.mainCommandMsg {
+	padding: 5;
+	background: none;
+    font-style: bold;
+    font-color: fontColor;
+	font-size: medium;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: center;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: horizontal-expand | horizontal-center;
+    focused-style: .mainCommandFocusMsg;
+}
+
+
+
+
+
+.mainCommandFocusMsg {
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: large;
+    font-style: bold;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: center;
+    layout: horizontal-expand | horizontal-center;
+}
+
+.mainScreenMsgS {
+    padding: 5;
+    padding-left: 1;
+    padding-right: 1;
+    background {
+        color: brightBgColor;
+    }
+    font-size: medium;
+    /*focused-style: .mainCommandFocusMsgS;*/
+    layout: horizontal-expand | horizontal-center;
+    columns: 1;
+}
+
+
+.mainCommandMsgS {
+    font-bitmap:pa10;
+    padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: horizontal-expand | horizontal-center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: center;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    focused-style: .mainCommandFocusMsgS;
+
+}
+
+.mainCommandFocusMsgS {
+    font-bitmap:pa10;
+    padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+    font-style: bold;
+    layout: horizontal-expand | horizontal-center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: center;
+}
+
+
+
+
+
+/* for unit and buildings*/
+
+
+.mainScreenBE {
+    padding: 5;
+    padding-left: 15;
+    padding-right: 15;
+    /*focused-style: .mainScreenFocuseE;*/
+    background {
+        color: brightBgColor;
+    }
+
+    layout: horizontal-expand | horizontal-center;
+
+    columns: 1;
+}
+
+
+.mainScreenBES {
+    padding: 5;
+    padding-left: 15;
+    padding-right: 15;
+    /*focused-style: .mainScreenFocuseES;*/
+    background {
+        color: brightBgColor;
+    }
+    /*focused-style: .slistitem;*/
+    layout: horizontal-expand | horizontal-center;
+    columns: 1;
+}
+
+
+
+
+
+.mainCommandBE {
+	margin: 2;
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	layout: center;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: center;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: horizontal-expand | horizontal-center;
+    focused-style: .mainScreenFocuseBE;
+
+}
+
+.mainScreenFocuseBE{
+	padding: 5;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: brightBgColor;
+		/*border-color: fontColor;*/
+		border-width: 0;
+	}
+	font {
+		style: bold;
+        color: fontColor;
+		size: medium;
+	}
+    layout: horizontal-expand | horizontal-center;
+
+}
+
+.mainCommandBES {
+    font-bitmap:pa10;
+    margin: 2;
+	padding: 5;
+	background: none;
+    font-color: fontColor;
+	font-size: medium;
+	/*icon-image: url( icon%INDEX%.png );*/
+	icon-image-align: center;
+    /*margin: 2; padding: 5; background:none;*/
+    /*font-bitmap:www1;font-color: fontColor;*/
+    /*font-style: bold; font-size: medium;*/
+    layout: horizontal-expand | horizontal-center;
+    focused-style: .mainScreenFocuseBES;
+}
+
+.mainScreenFocuseBES{
+    font-bitmap:pa10;
+
+    padding: 5;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: brightBgColor;
+		/*border-color: fontColor;*/
+		border-width: 0;
+	}
+	font {
+		style: bold;
+        color: fontColor;
+		size: medium;
+	}
+    layout: horizontal-expand | horizontal-center;
+
+}

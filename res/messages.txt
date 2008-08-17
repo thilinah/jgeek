@@ -1,0 +1,383 @@
+#######################################
+#                                     #
+#   This file contains translations   #
+#   of the application.               #
+#   Key and Value are separated       #
+#   by the equals-sign "=".           #
+#                                     #
+#######################################
+
+# You can also define localized preprocessing variables here, by starting the
+# definition with "var:". Variables defined here will override the ones defined
+# in the <variables>-section of your build.xml.
+# Variables starting with "polish." or "MIDlet-" don't need to start with "var:"
+# by the way.
+var:MyExampleVariable=Hello World
+
+# It's also possible to set MIDlet-attributes for your JAD- and MANIFEST-files here.
+# If you like you can start them with "var:" as well, but it is not needed.
+# Again MIDlet-attributes defined override the one defined in the <info>-
+# and <jad>-sections of your build.xml
+MIDlet-Description=A localized sample project
+
+
+b1=Factory|800|800|Bomber,3#Chopper,2#War Tank,1#War Bike,2#Hover Craft,3#Cannon,2#|1|Metal,4#Crystal,4#Energy,8#|Crystal,1500#|3|1|Factory builds machines like war tanks and supply truck, War Bike, Cannon, Hover Craft, and Chopper. Different amount of Crystal or metal is needed for upgrade to the next level of factory.|0|0|uni|
+b2=Refinery|400|400||1|Metal,5#Crystal,4#|Metal,1000#|3|3|Refinery is a resource building capable of boosting the gathering rates of crystal and metal. Make sure to build metal Refineries in grassless regions near mountains and crystal Refineries near shallow waters near mountains to make gathering rates of these resources higher. To upgrade to the next level it needs certain amount of crystal and metal. Once updated to the next level the production rate of crystal and metal increases|0|0|res|
+b3=Barrack|600|600|Sniper,2#Rocket Launcher,1#Commando,3#|1|Metal,3#Crystal,4#Energy,4#|Dark Matter,800#|3|3|Barrack trains armies. This is capable of building units such as Rocket Launcher, Commando and Sniper according to the level of the barrack. Crystal or metal is needed for upgrade a barrack|0|0|uni|
+b4=Outpost|400|400||1|Metal,2#Crystal,2#Energy,5#|Metal,1000#|3|2|Outpost is useful when your planet is under the power of another emperor?s mission as a defencive unit. Having more outposts increase your population limit|0|0|def|
+b5=Fort|2000|2000||1|Crystal,4#Energy,4#Dark Matter,5#|Dark Matter,1000#|3|2|Fort  is useful at a time of you are under the power of another emperor?s  mission. At each level of the fort, there is a maximum number of forts that could be built and different amount of dark matter or crystal is needed to upgrade to next level. Having more forts increase your population limit|0|0|def|
+b6=Solar Plant|200|200||1|Energy,5#Dark Matter,1#|Metal,800#|3|5|Solar Plant is a resource building capable of boosting the gathering rate of energy and dark matter. It is recommended to build it in a grassless region for higher efficiency. Different amount of crystal and metal is needed to upgrade to the next level. Once updated to a higher level the production rate of energy and dark matter increases. At each level there are a maximum number of solar plant units that could be made|0|0|res|
+
+u1=Commando|400|hrmb|60|Metal,1#Crystal,1#Energy,8#|Commando is an individual who is specialize in offensive or assault tasks. Commando could be built in a level two barrack. Metal and crystal is used to produce a Commando|0|4|100|12|14|
+u2=Hover Craft|70|grwa|60|Metal,6#Crystal,3#Energy,15#|Hover craft is often used by militaries for missions. It could be built in a level three factory. Metal and crystal is used to produce a Hover Craft. It can move both on water and ground|0|3|100|40|28|
+u3=Bomber|50|airb|60|Metal,5#Crystal,10#Energy,2#|A bomber is a military aircraft designed to attack ground targets, by dropping bombs. Bomber could be built in a level three factory. Metal and crystal is used to produce a Bomber|0|4|100|26|18|
+u4=War Bike|90|grsa|60|Metal,6#Crystal,6#Energy,6#|War bike is used to enhance the power of a mission. It is a fast unit and can move on shallow waters. War bike could be built in a level two factory.  Metal and crystal is used to produce a war tank|0|3|100|24|24|
+u5=War Tank|100|grdb|60|Metal,4#Crystal,3#Energy,5#|A war tank is an armored vehicle designed for front-line action, combining strong offensive and defensive capabilities. War tank could be built in a level one factory. Metal and crystal is used to produce a war tank|0|4|100|34|26|
+u6=Chopper|60|aira|60|Metal,9#Crystal,9#Energy,5#|Chopper could be useful as an attacking or as a defensive unit. It could be built in a level three factory. Metal, crystal and dark matter is used to produce a Chopper|0|3|100|28|24|
+u7=Cannon|120|grdb|60|Metal,10#Crystal,5#Energy,6#|Cannon is a type of artillery, which uses gun power to launch a projectile over a distance. It could be built in a level three factory. Metal and crystal is used to produce a Cannon|0|8|100|28|26|
+u8=Sniper|70|hrmc|60|Metal,4#Crystal,6#Energy,3#|A sniper is a combatant who specializes in shooting from a concealed position over longer ranges, with a sniper rifle. Sniper could be built in a level three factory. Metal, crystal and dark matter is used to produce a Sniper|0|6|150|18|16|
+u9=Rocket Launcher|50|hrma|60|Metal,4#Crystal,1#Energy,10#|Rocket launcher is used to launch missiles, which are military rockets containing an explosive warhead. Rocket Launcher could be built in a level one barrack. Metal is used to produce a Rocket Launcher|0|6|100|14|16|
+
+r1=Metal|10000|0|m|
+r2=Crystal|10000|0|c|
+r3=Energy|10000|0|e|
+r4=Dark Matter|10000|0|d|
+
+
+map.1=refo1:30*30*19,0,0,0*1,0,6,6*1,0,6,7*9,0,4,0*12,0,0,0*1,0,6,6*1,0,6,7*5,0,2,6*11,0,4,0*9,0,0,0*1,0,6,6*2,0,2,6*10,0,4,0*1,0,3,6*7,0,4,0*4,0,0,0*1,0,6,6*1,0,1,7*3,0,0,0*1,0,4,6*2,0,1,9*2,0,1,8*1,0,3,9*1,0,2,7*1,0,4,6*4,0,4,0*1,0,2,7*1,0,0,0*1,0,0,7*6,0,4,0*2,0,0,0*1,0,6,6*1,0,6,7*1,0,4,0*1,0,5,6*3,0,0,0*1,0,0,7*1,0,2,7*5,0,0,0*1,0,0,7*3,0,3,6*1,0,2,7*3,0,0,0*1,0,4,6*5,0,4,0*1,0,0,0*1,0,6,6*1,0,6,7*2,0,3,7*1,0,2,7*18,0,0,0*1,0,0,7*3,0,3,6*2,0,4,0*1,0,6,7*2,0,4,0*1,0,2,7*24,0,0,0*1,0,4,6*3,0,4,0*1,0,2,7*25,0,0,0*1,0,4,6*1,0,4,0*1,0,3,6*1,0,2,7*26,0,0,0*1,0,4,6*1,0,4,0*28,0,0,0*1,0,0,7*1,0,1,8*29,0,0,0*1,0,4,6*1,1,5,1,0,0*1,1,0,1,0,0*1,1,0,2,0,0*1,1,4,2,0,0*25,0,0,0*1,0,0,7*2,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*11,0,0,0*1,0,1,5*1,0,3,5*15,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*10,0,0,0*1,0,1,5*2,0,3,0*1,0,3,5*14,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*8,0,0,0*1,0,1,5*1,0,4,4*4,0,3,0*2,0,4,4*1,0,3,5*11,0,0,0*1,1,1,2,0,0*1,1,0,2,0,0*1,1,2,2,0,0*7,0,0,0*1,0,1,5*7,0,3,0*1,0,0,5*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*7,0,0,0*1,0,6,4*9,0,3,0*11,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*7,0,0,0*1,0,6,4*9,0,3,0*11,0,0,0*1,1,1,2,0,0*1,1,0,2,0,0*7,0,0,0*1,0,2,5*10,0,3,0*11,0,0,0*1,1,4,2,0,0*1,1,0,2,0,0*7,0,0,0*1,0,2,5*9,0,3,0*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*8,0,0,0*1,0,2,5*7,0,3,0*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*9,0,0,0*1,0,2,5*5,0,3,0*1,0,4,5*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*13,0,0,0*1,0,2,5*1,0,3,0*13,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*28,0,0,0*1,1,1,2,0,0*174,0,0,0*
+map.2=refo2:30*30*19,0,0,0*1,0,6,6*1,0,6,7*9,0,4,0*12,0,0,0*1,0,6,6*1,0,6,7*5,0,2,6*11,0,4,0*9,0,0,0*1,0,6,6*2,0,2,6*10,0,4,0*1,0,3,6*7,0,4,0*4,0,0,0*1,0,6,6*1,0,1,7*3,0,0,0*1,0,4,6*2,0,1,9*2,0,1,8*1,0,3,9*1,0,2,7*1,0,4,6*4,0,4,0*1,0,2,7*1,0,0,0*1,0,0,7*6,0,4,0*2,0,0,0*1,0,6,6*1,0,6,7*1,0,4,0*1,0,5,6*3,0,0,0*1,0,0,7*1,0,2,7*5,0,0,0*1,0,0,7*3,0,3,6*1,0,2,7*3,0,0,0*1,0,4,6*5,0,4,0*1,0,0,0*1,0,6,6*1,0,6,7*2,0,3,7*1,0,2,7*18,0,0,0*1,0,0,7*3,0,3,6*2,0,4,0*1,0,6,7*2,0,4,0*1,0,2,7*24,0,0,0*1,0,4,6*3,0,4,0*1,0,2,7*25,0,0,0*1,0,4,6*1,0,4,0*1,0,3,6*1,0,2,7*26,0,0,0*1,0,4,6*1,0,4,0*28,0,0,0*1,0,0,7*1,0,1,8*29,0,0,0*1,0,4,6*1,1,5,1,0,0*1,1,0,1,0,0*1,1,0,2,0,0*1,1,4,2,0,0*25,0,0,0*1,0,0,7*2,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*11,0,0,0*1,0,1,5*1,0,3,5*15,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*10,0,0,0*1,0,1,5*2,0,3,0*1,0,3,5*14,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*8,0,0,0*1,0,1,5*1,0,4,4*4,0,3,0*2,0,4,4*1,0,3,5*11,0,0,0*1,1,1,2,0,0*1,1,0,2,0,0*1,1,2,2,0,0*7,0,0,0*1,0,1,5*7,0,3,0*1,0,0,5*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*7,0,0,0*1,0,6,4*9,0,3,0*11,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*7,0,0,0*1,0,6,4*9,0,3,0*11,0,0,0*1,1,1,2,0,0*1,1,0,2,0,0*7,0,0,0*1,0,2,5*10,0,3,0*11,0,0,0*1,1,4,2,0,0*1,1,0,2,0,0*7,0,0,0*1,0,2,5*9,0,3,0*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*8,0,0,0*1,0,2,5*7,0,3,0*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*9,0,0,0*1,0,2,5*5,0,3,0*1,0,4,5*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*13,0,0,0*1,0,2,5*1,0,3,0*13,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*28,0,0,0*1,1,1,2,0,0*174,0,0,0*
+map.3=refo3:30*30*19,0,0,0*1,0,6,6*1,0,6,7*9,0,4,0*12,0,0,0*1,0,6,6*1,0,6,7*5,0,2,6*11,0,4,0*9,0,0,0*1,0,6,6*2,0,2,6*10,0,4,0*1,0,3,6*7,0,4,0*4,0,0,0*1,0,6,6*1,0,1,7*3,0,0,0*1,0,4,6*2,0,1,9*2,0,1,8*1,0,3,9*1,0,2,7*1,0,4,6*4,0,4,0*1,0,2,7*1,0,0,0*1,0,0,7*6,0,4,0*2,0,0,0*1,0,6,6*1,0,6,7*1,0,4,0*1,0,5,6*3,0,0,0*1,0,0,7*1,0,2,7*5,0,0,0*1,0,0,7*3,0,3,6*1,0,2,7*3,0,0,0*1,0,4,6*5,0,4,0*1,0,0,0*1,0,6,6*1,0,6,7*2,0,3,7*1,0,2,7*18,0,0,0*1,0,0,7*3,0,3,6*2,0,4,0*1,0,6,7*2,0,4,0*1,0,2,7*24,0,0,0*1,0,4,6*3,0,4,0*1,0,2,7*25,0,0,0*1,0,4,6*1,0,4,0*1,0,3,6*1,0,2,7*26,0,0,0*1,0,4,6*1,0,4,0*28,0,0,0*1,0,0,7*1,0,1,8*29,0,0,0*1,0,4,6*1,1,5,1,0,0*1,1,0,1,0,0*1,1,0,2,0,0*1,1,4,2,0,0*25,0,0,0*1,0,0,7*2,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*11,0,0,0*1,0,1,5*1,0,3,5*15,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*10,0,0,0*1,0,1,5*2,0,3,0*1,0,3,5*14,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*8,0,0,0*1,0,1,5*1,0,4,4*4,0,3,0*2,0,4,4*1,0,3,5*11,0,0,0*1,1,1,2,0,0*1,1,0,2,0,0*1,1,2,2,0,0*7,0,0,0*1,0,1,5*7,0,3,0*1,0,0,5*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*7,0,0,0*1,0,6,4*9,0,3,0*11,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*7,0,0,0*1,0,6,4*9,0,3,0*11,0,0,0*1,1,1,2,0,0*1,1,0,2,0,0*7,0,0,0*1,0,2,5*10,0,3,0*11,0,0,0*1,1,4,2,0,0*1,1,0,2,0,0*7,0,0,0*1,0,2,5*9,0,3,0*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*8,0,0,0*1,0,2,5*7,0,3,0*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*9,0,0,0*1,0,2,5*5,0,3,0*1,0,4,5*12,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*13,0,0,0*1,0,2,5*1,0,3,0*13,0,0,0*1,1,3,1,0,0*1,1,4,1,0,0*28,0,0,0*1,1,1,2,0,0*174,0,0,0*
+
+
+
+
+menu=JCage
+menu.Login=Login
+menu.Login.i=/password.png
+menu.Game=Game room
+menu.Game.i=/game.png
+menu.GameSin=2nd Colony Single
+menu.GameSin.i=/instant-available.png
+menu.Chat=Chat
+menu.Chat.i=/chat.png
+menu.Lang=Change Language
+menu.Lang.i=/lang.png
+menu.Help=Help
+menu.Help.i=/help.png
+menu.Speed=Phone Speed
+menu.Speed.i=/speed.png
+menu.Audio=Audio
+menu.Audio.i=/sound.png
+menu.Quit=Exit
+menu.Quit.i=/exit.png
+
+g.menu=Dark Inspiration
+g.res=Resources
+g.res.i=/res.png
+g.build=Buildings
+g.build.i=/building.png
+g.units=Units
+g.units.i=/units.png
+g.maps=My Planet
+g.maps.i=/mp.png
+g.mis=Missions
+g.mis.i=/mis.png
+g.att=Colonies
+g.att.i=/col.png
+g.msg=Messages
+g.msg.i=/message.png
+g.news=News
+g.news.i=/news.png
+g.otherMaps=Other Planets
+g.otherMaps.i=/op.png
+
+#custom images
+res.def=/notes.png
+bui.def=/notes.png
+uni.def=/notes.png
+map.def=/notes.png
+mis.def=/notes.png
+msg.def=/mail.png
+news.def=/notes.png
+
+server.error=Error connecting to server
+login.message=Login to Server.. Please wait
+register.success=Registered successfully
+register.fail=Duplicate username. Please try with another username
+
+
+#news reporting
+news.repoter.icon=/repoter.jpg
+news.channel.name=Plantary News
+news.msg.res=resources you have currently are
+news.new.msg.arrived=you have a new message from
+
+
+
+#FormResourceBuilding
+msg.Building.level=Level
+msg.Generate=Generates:
+msg.Need=Need:
+msg.frb.upgrade=Upgrade to next level:
+
+#FormBuildingUnits
+
+#FormMissions
+msg.against=Against
+
+#FormNewMission
+err.notarget=Error: Mission must have a target
+err.nounits=Error: Mission must have atleast one unit
+err.creationFailed=Error: Failed to create the mission
+err.already.exist=Mission already exists
+
+#FormMessages
+g.msg.menu=Messages
+g.msg.server=Notices
+g.msg.server.i=/mailnote.png
+g.msg.user=Messages
+g.msg.user.i=/mail-get.png
+
+#FormEnterValue
+g.enter.planet=Enter planet name
+
+
+
+#Help menu
+h.p1.t=login screen
+h.p1.c=Enter a user name and a password, this user name and password can be used to login to our website and update your profile.
+h.p2.t=Introduction
+h.p2.c=Now you are a ruler of a planet and will soon become an emperor. The goal is to colonize the universe and score points. To become the next emperor you have to gather resources while defending your planet and then you can challenge other emperors. Make alliances with other emperors and get their help to defend your planet. Dark Inspiration is the ultimate test of your strategic planning ability.
+h.p3.t=Getting started
+h.p3.c=When you start the game, you will get a view of your planet from outer space. This screen displays your score and current rank. By selecting the Enter command you see the landscape of your planet. There you can create buildings to gather resources, defend your planet and buildings for creating your army. To find more information about each building, go to Main menu and select buildings. You can get more information by clicking on each building. To get more information about your units, go to units menu. In next section, I will teach you how to create buildings.
+h.p4.t=Moving cursor
+h.p4.c=First enter your planet. When you see the terrain, and a green arrow on it. You can move that cursor using the joystick or 1,2,3 and 4. The cursor is used to select units and buildings and issue move commands to units. You can click the cursor using select button or 5.
+h.p5.t=Creating buildings
+h.p5.c=First enter your planet. When you see the terrain of the planet, press 1. This will take you to buildings menu. Select the building you want to build. Now you will see the terrain again. Move the cursor until you see a red square, not a red cross. Then click on the ground to place the building. Initially the health bar of the building will be blue. You can’t use the building, until it turns completely green. When you move the cursor on to a building and click on it, it will be selected and health bar will be displayed. Click on the same building again to get the menu for the building.
+h.p6.t=Resource buildings
+h.p6.c=At the start of the game you will be given some resources to build Refineries and solar plants. These buildings will boost the gathering rates of metal, crystal and energy. When building a Refinery you have to select a resource rich ground for that. Build metal Refineries in grassless regions near mountains and Build your crystal Refineries near shallow waters near mountains to make gathering rates of these resources higher. Even though you build Refineries in correct places rates of those Refineries depends on the abundance of the resource in your planet.When building solar plants, build them in grassless regions to get the best efficiency from the plant. After building few resource buildings (Refineries and Solar plants), you will see the amount of resources you are having is increasing.
+h.p7.t=Unit Buildings
+h.p7.c=Now it is the time to build an army for you. First you have to build a Barrack which train armies and a Factory which build machines like war tanks and trucks. After building a Barrack or a Factory, double click(click on it once and when the red square curser is displayed, click on it again) on it to get the menu. From the menu you are getting select create. Then select the unit you want to build. It will be created and appeared next to the building.
+h.p8.t=Creating units
+h.p8.c=Double click on a Factory or a Barrack to get the unit menu. Select the unit to build.
+h.p9.t=Moving units
+h.p9.c=Click on a unit and the health bar will be displayed. Then move the cursor to a point and click there to move the selected unit  to that point.
+h.p10.t=Self destroying
+h.p10.c=You can destroy our units and buildings by selecting them and pressing 9.
+h.p11.t=Getting other planets
+h.p11.c=Go to main menu and select other planets. Now select Get random maps option to get some maps randomly from the server. If you know the name of the planet you can type the name to get information about it by selecting Get map menu.The maps in your list will be used to send messages and missions to other planets.
+h.p12.t=Communicating with other emperors
+h.p12.c=Now you have a developing world and you are ready to contact other planets. First you have to find information about some planets. To do that, go to the main menu and select “Other planets”. Now select get planets from the menu to get the list of planets. By clicking selecting each planet you can see the information about it. Some plants are untouched and some planets are colonized by other emperors. Some planets are home planets of other emperors and for now it’s better to stay away from them.Now you can send messages to those planets, if you are interested to build an alliance or if you just need to know what kind of emperor is ruling it. For that you have to send your message to a home planet or a colonized planet.For that, go to the main menu and select “Messages”. Then select “new message”. In the empty window you are getting, type a subject for your message and the message body. Then select the planet to send it and press send. You might get a replay after that message is delivered to the emperor.
+h.p13.t=Creating space missions and attacking other planets
+h.p13.c=Now you have a developed planet and an army to fight for you. By creating missions you can send that army in your home planet to other planets. Send units from your army to planets of other emperors to attack their planet and weaken their strength and development progress. If you send sufficient amount of units to a planet which is colonized by another emperor you can capture that planet. But you can not capture a home planet of another emperor that way.If you send a mission to a planet which is not occupied by another emperor (an unclaimed planet), that planet becomes yours. But the maximum number of planets you can capture at a time is five. When you need more resources, you can use this method to capture planets and extract resources from those planets.To create a mission, select missions from the main menu. Then select the target planet. Also add units to that mission and select send to send it to the target.If you can’t see any planets, go to Other planes menu and get information about some planets.
+h.p14.t=Colonizing other planets
+h.p14.c=To colonize another planet, you can create a mission to an unclaimed planet or send sufficient number of units by creating a mission against a planet occupied by another emperor. When you create a mission against an unclaimed planet, it becomes yours. Then you can use that planet to gather resources you need to build your empire.If you want to capture a planet occupied by another emperor, you have to keep creating missions against that planet and send those to the enemy planet. If the enemy couldn’t stand against your power, the planet will become yours.When you capture a planet that way, you will receive a notification. Then the captured planet will be displayed under “Colonies” in main menu. By selecting a planet from that list, you can enter it.
+h.p15.t=Sending units to planets you colonized
+h.p15.c=When you colonized a planet, you can build resource buildings on that planet to gather resources. But you need to keep a small platoon on that planet to protect your buildings from attacks that can come from other emperors and inhabitant rebel groups of that planet. To send more units to your colonies, create a space mission and send it to your colony.
+
+
+
+
+
+#System messages
+m.nousername=No username specified
+m.nopaasword=No password specified
+m.passnomatch=Passwords do not match
+m.no.res.create.unit=Not enough resources to create unit
+m.no.res.create.building=Not enough resources to create building
+m.num.unit.ex=Population limit exceeded. Build more Forts and Outposts
+m.num.building.ex=Number of buildings allowed for this building type exceeded. Upgrade the level of the building
+m.building.upgrade=Can not upgrade the building. Maximum level reached
+m.building.upgrade.nores=No enough resources to upgrade the building level
+m.new.msg=You have a new message. Do you want to view it?
+
+m.att.res1=Your planet
+m.att.res2=is under attack by
+m.att.res3=.All resource productions will be stoped in the planet, until you distroy all enemy units
+
+m.colony.limit=Colony limit reached. You have to remove one of your colonies before creating a mission
+
+m.cap.col1=Your army captured the planet
+m.cap.col2=
+
+m.send.res=I send you resources
+
+#=======================================================
+#sinhala
+
+
+#menu.s=JCage
+#menu.Login.s=Óìäm
+#menu.Login.i.s=/password.png
+#menu.Game.s=ý-@l`v
+#menu.Game.i.s=/group-event.png
+#menu.GameSin.s=ý-@l`v 1
+#menu.GameSin.i.s=/instant-available.png
+#menu.Chat.s=kw`bh
+#menu.Chat.i.s=/chat.png
+#menu.Lang.s=x`;`v @vnS ¿Ým
+#menu.Lang.i.s=/lang.png
+#menu.Help.s=sh`y
+#menu.Help.i.s=/help.png
+#menu.Quit.s=ÎKmy`m
+#menu.Quit.i.s=/cancel.png
+
+
+menu.s=JCage
+menu.Login.s=Óìäm
+menu.Login.i.s=/password.png
+menu.Game.s=kriidaa kaamaraya
+menu.Game.i.s=/game.png
+menu.GameSin.s=ý-@l`v 1
+menu.GameSin.i.s=/instant-available.png
+menu.Chat.s=kw`bh
+menu.Chat.i.s=/chat.png
+menu.Lang.s=haashaawa
+menu.Lang.i.s=/lang.png
+menu.Help.s=udhawu
+menu.Help.i.s=/help.png
+menu.Speed.s=weegaya
+menu.Speed.i.s=/speed.png
+menu.Audio.s=shabdha
+menu.Audio.i.s=/sound.png
+menu.Quit.s=iwathwiima
+menu.Quit.i.s=/exit.png
+
+
+
+g.menu.s=2nd Colony
+g.res.s=sampath
+g.res.i.s=/res.png
+g.build.s=godaneagili
+g.build.i.s=/building.png
+g.units.s=vaahana
+g.units.i.s=/unitss.png
+g.maps.s=magee grahalowa
+g.maps.i.s=/mp.png
+g.mis.s=meheyum
+g.mis.i.s=/mis.png
+g.att.s=janapadha
+g.att.i.s=/col.png
+g.msg.s=panivida
+g.msg.i.s=/message.png
+g.news.s=puwath
+g.news.i.s=/news.png
+g.otherMaps.s=venath grahalooka
+g.otherMaps.i.s=/op.png
+
+#custom images
+res.def.s=/notes.png
+bui.def.s=/notes.png
+uni.def.s=/notes.png
+map.def.s=/notes.png
+mis.def.s=/notes.png
+msg.def.s=/notes.png
+news.def.s=/notes.png
+
+server.error.s=p`lk sMbNqw` @n`m#w
+login.message.s=p`lk Óìäm kr#z`kr mqK ivsNn
+register.success.s=Äy`pØA¦ krn lÙ
+register.fail.s=Äy`pØA¦ h#ÚÐM n`my¿. kr#z`kr @vnW h#ÚÐM n`myK x`ìw` krNn
+
+
+#news reporting
+news.repoter.icon.s=/repoter.jpg
+news.channel.name.s=grahalooka puwath
+news.msg.res.s=oba sathu sampath
+news.new.msg.arrived.s=obata aluth panividayak labii atha
+
+
+
+#FormResourceBuilding
+msg.Building.level.s=thathwaya
+msg.Generate.s=nipadhawana
+msg.Need.s=awashya
+msg.frb.upgrade.s=miilaga thathwayata
+
+#FormBuildingUnits
+
+#FormMissions
+msg.against.s=e@rµìm
+
+#FormNewMission
+err.notarget.s=koo ilakka grahalowa?
+#err.notarget.s=×m`qy @m@hýmt ilKkyK av&û
+err.nounits.s=ek meheyumakata ek waahanayak hoo thibiya yuthuya
+#err.nounits.s=×m`qy @m@hýmt avmv ek EkkyK av&û
+err.creationFailed.s=×m`qy @m@hýM ÎRm`zy aâr#y
+#err.creationFailed.s=×m`qy @m@hýM ÎRm`zy aâr#y
+err.already.exist.s=Mission already exists
+
+#FormMessages
+g.msg.menu.s=Messages
+g.msg.server.s=q#NíM
+g.msg.server.i.s=/notes.png
+g.msg.user.s=p¹Vd
+g.msg.user.i.s=/notes.png
+
+#FormEnterValue
+g.enter.planet.s=grahalookayee nama
+
+
+
+
+#Help menu
+h.p1.t.s=pivisum kavuluwa
+h.p1.c.s=obage ankaya saha rahas padhaya aeathul karanna. mema padha yugalaya apagee web adaviyata pivisiimata saha obagee thorathuru yaavathkaaliina kiriimata yodhaagatha heaka.
+h.p2.t.s=hadhunvaadhiima
+h.p2.c.s=oba dhen grahalookayaka paalakayek vana athara, adhiraajayek viime varamdha obata himivee. mema kriidaavee aramuna vannee thama aadhipathya vishvaya puraa pathuravamin lakunu reas kireemayi. lakunu veadipura reas kireema sandhahaa oba sampath ekathu kala yuthu athara anekuth ghahalooka aakramanaya kireemadha kala uthuya. meveani avasthaavaladhii obata obee mithurangee udhav labaagathheaka. mema kriidaaveedhi obagee upaaya sambandeeya nuvana meanavin uragaa balanu leabee.
+h.p3.t.s=aarambhaya
+h.p3.c.s=tharagayata pivisenavaath samagama, obee grahalookayee bhaahira ruupayak, oba reas kala lakunu pramaanaya saha obage thathvaya obata dhiswee. ethean sita entar vidhaanaya dhenavaath samagama obee grahahalookayee buumiya obata dhisvanu aetha. ebhidhii obata avashya sampath saha seenaava reas kireemata adhaalavana godaneagili seedhiima kala heaka. siyaluma godaneagili vala thorathuru pradhaana menuwee anthargathavee. meparidhima anekuth eekaka vala dhaththadha adhaala menuva bhaavithayen labaagathaheaka.
+h.p4.t.s=karsaraya chalanaya karaviima
+h.p4.c.s=obagee pradheeshayata pivisenavath samagama kola peaheathi ii hisak dhisvanueatha. obata eya 2, 4, 6 saha 8 yathuru bhaavithayen chalanaya kalaheaka. mema kersaraya godaneagili saha eekaka theeriimeedhii bhaavithaa karana athara ee sandhahaa 5 yathura bhaavith keree.
+h.p5.t.s=godaneagili seadhiima
+h.p5.c.s=thirayee obagee huumi bhaagaya dhis wanavita anka 1 yathura obaa godaneagili menuvata aeathul vanna. inpasu obata avashya godaneagilla thoora gana rathu kotuwak lesa karsaraya dhisvanathuru eya chalanaya karavanna. inpasu huumiya thooranna. palamuva ema godaneagille dharshakaya nil pehe vana athara karamayen eya rathupeaha ganu aeatha. dharshakaya sampuuranayen rathu paata vanathuru ema godaneagilla haavithayata gathnoheaka. saadhaa nima karana ladha godaneagillak karsarayen theeriimen dharshakaya dhis vana athara neavathath esee kiriimen adhaala menuva labaagathaheaka.
+h.p6.t.s=sampath godaneagili
+h.p6.c.s=aarambhayedhii suurya shakthi janaka saha piripahadhu seadiimata avashya sampath ibeema leabenu etha. mema godaneagili yakada, palingu saha surya shakthiya ekathuveeme seegrathaavaya weadi karayi. meveani godaneagili theaniimeedhii huumiyee svabaavaya geana sealakilimath viyayuthuya. yakada piripahadhuwa thanakola neathi kandukara pedhesakada palingu piripaduwa nogeanburu jalaya sahitha kandukarayeeda seediima vadaath yoogyavee. sampath ekathuveeme seegrathaavayata obagee graha lookayee sampath sulabhathaavayada balapaai. meeta amatharava suryashakthi janaka thankola rahitha padheesha vala theanuu vita uparima seegrathaavayen kriyaa karayii.
+h.p7.t.s=nishpaadhana godaneagili
+h.p7.c.s=dhean seenaava sanvidhaanaya kalayuthu kaalayayii. palamuva oba hamudhaa kandavurak saha kamhalak seadhiyayuthuwee. inpasu, adhaala munuva labaa geaniimata kumana hoo godaneagillak matha dhepaarak obanna .ema menuwee ethi seadhiime vidhaanaya thooranna. inpasu obata avashya eekakaya thooranna. sulu mohothakin eya nipadhavii obata dhisvanu eatha.
+h.p8.t.s=ekaka seadiima
+h.p8.c.s=hamudhaa kandhavuree saha karmaanatha shaalavee menu magin avashyaa eekaka seadhiya heaka.
+h.p9.t.s=eekaka chalanaya karaveema
+h.p9.c.s=kersarayen adhaala eekakaya theerimen pasu obata avashya theanata kersaraya yomu kota entar vidhaanaya denna.
+h.p10.t.s=sva vinaashakarageaniima
+h.p10.c.s=obagee godaneagili saha eekaka kersarayen thoora yathuru anka 9 ebiimen vinaasha kala heaka.
+h.p11.t.s=anekuth grahalooka dhaththa labaageaniima
+h.p11.c.s=pradhaana menuwee ethi anekuth grahalooka vidhaanaya thooranna. den ahanbu lesa sithiyam laba geaneeme vidhaanaya kriyaathmaka karanna. oba nama dhannaa grahalookayaka thorathuru pahasuwenma labaagathaheaka.inpasu obagee leayisthuwee ethi grahalooya leaisthuwata aakaramana dhiyath kireemee avasthaava obata leanee.
+h.p12.t.s=anekuth grahalooka samaga thorathuru huwamaaruva
+h.p12.c.s=den oba anekuth grahalooka samaga thorathuru huwamaaruvata suudhaanam. palamuwa pradhaana menuvee ethi anekuth ghralooka vidhaanaya kriyaathmaka karanna. esee leabena grahalooka vala thorathuru obata balaagathaheaka. mehidhii obata yatathuna saha nidhahas lesa grahalooka varga dhekak hamuwanu eatha. den obata ema grahalooka samaga panivuda huwamaaru kirimen mithurubhavak godanagaa gatha heaka. ee sandhahaa pradhaana menuwe ethi panivida vidhaanaya thoorannagena aluth panividayak labaaganna. evita lenbena kavuluwe mathrukaava saha panividaya niveridhiva gasaa ganna. inpasu adaala grahalookaya thoora yavanna vidhaanaya thooranna.
+h.p13.t.s=anekuth grahalooka aakramanaya kiriima
+h.p13.c.s=dhen obage grahalookaya sathuwa ethi yudha hamudaava yodaagena venath grahalookayak aakramanaya kireeme heakiyaava oba sathuva aetha. meveani aakramana magin sathuru raajadhaaneenge yudha balaya saha sanvardhana kriyaavliya adapana kalaheaka. oba pramaanavath balaeaniyak yodhaa aakramanayak dhiyath kalahoth ema grahalookayee balaya obata labaagathaheaka. namuth ee ayurin wenakenekunge mav grahalooka athpath karagathanoheaka. oba nidhahas grahalookayakata aakramanayak ghiyath kalahoth eya ibeema obee colaniyak vanueatha. namuth uparima colaniganana 5 k pamani.meheyumak dhiyath kiriimata pradhaana menuwen meheyum vidhaanaya kriyaathmaka karanna. inpasu udha seenankaya thoora aadhaala grahlookayata mudhaa harinna. meheuma ghiyath kireemata prathama anekuth grahalooka viddanaya magin pavathina leatisthuwak labaa ganna.
+h.p14.t.s=anekuth grahalookavala kolani seadhiima
+h.p14.c.s=nidhahas grahalookayakata aakramanayak dhiyath kiriimen ema grahalookaya obagee kolaniyak vabu athara, mav grahalovak novana anekuth grahalooka sandahaa shakthimath balaeaniyak yeviimen eya athpath karagath heaka. ee sandhahaa sathuru hamudhaavan sampuuranayenma vinaashakalyuthuya. elesa allaa gannaaladha grahalooka sampath ekathu kiriimata saha hamudhaa shakthiya thara kiriimata yodhaagathheaka.
+h.p15.t.s=obagee kolani sandhahaa balaeani yeaviima
+h.p15.c.s=obage kolanidha mav grahalookayamen sampath reas kiriima aadhi katayuthu sandhahaa yodhaagathaheaka. namuth sidhuvana aakramana valin obee godaneagili aarakshaa kiriimata hamudhaa kandaya yedhaviimata obata siduvanu eatha. meheyum maargayen obagee kolani sandahaa hamudhaava yeaviya heaka.
+
+
+
+
+
+
+
+#System messages
+m.nousername.s=nama koo
+m.nopaasword.s=rahas wachanaya naane
+m.passnomatch.s=rahas wachana wenasne
+m.no.res.create.unit.s=meya seaadiimata awashya sampath nomeatha
+m.no.res.create.building.s=meya seaadiimata awashya sampath nomeatha
+m.num.unit.ex.s=obata pawathwaagatha heaki uparima janagrahanaya ikmawaa atha. thawath balakotu idhikaranna
+m.num.building.ex.s=obata pawathwaagatha heaki mema wargayea uparima godanagili ganana ikmawaa atha. mema godanagille thathwaya weadi kara ganna.
+m.building.upgrade.s=godaneagilla thawa dhuratath yaawathkaaliina kala nohaka
+m.building.upgrade.nores.s=godaneagilla yaawathkaaliina kiriimata awashya sampath nomatha
+m.new.msg.s=obata aluth paniwidayak thibea. eya baliimata awashyada?
+
+m.att.res1.s=
+m.att.res2.s=namathi obe grahalowa
+m.att.res3.s=visin aakramanaya kara atha. owun paradhawana thek seama sampath jananaya wiimakma navathii
+
+m.colony.limit.s=uparima janapadha ganana ikmawaa atha. meheyumata pera janapadayak iwath karanna
+
+m.cap.col1.s=obagee hamudhawa
+m.cap.col2.s=namathi grahalowa alla gannaa ladhii
+
+m.send.res.s=mama obata sampath ewwaa
