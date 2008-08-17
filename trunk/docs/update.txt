@@ -1,0 +1,14 @@
+1)game is built around maps
+2)building,unit,maps,resources hashtables are still static,but reads datafrom messages.txt
+3)need hashtables bound to map namely, baseResources,baseBuilding,baseUnit
+4)stop unit actions until the map is loaded
+5)Game menu = start,help,speed,update,Exit
+6)Start menu = select map,resource level (1x,2x,3x),players,colour
+7)Need methods to convert pictures to different colours
+8)building and unit creation screens will be same as before
+9)Dont let units move on others
+10)Allow selection of multiple units
+11)Game AI engine for each user
+12)Buildings can be upgraded from map
+13)Provide mini-map
+14)Building level for each game for each user should be saved

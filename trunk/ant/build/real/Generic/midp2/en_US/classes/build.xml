@@ -1,0 +1,217 @@
+<!-- This file controls the build process.                    -->
+        <!-- The most important target is the j2mepolish-target,      -->
+        <!-- which controls for what devices the application should   -->
+        <!-- be created and so on.                                    -->
+        <!--                                                          -->
+        <!-- Important: when you have no Wireless Toolkit installed   -->
+        <!-- you need to define the "preverify"-attribute             -->
+        <!-- of the <build>-element of the J2ME Polish task.          -->
+        <!--                                                          -->
+        <!-- When you call Ant from the command-line, you can         -->
+        <!-- call "ant test j2mepolish" to skip the obfuscation       -->
+        <!-- and to build the example for fewer handsets.             -->
+        <!-- The default target builds and obfuscates the example.    -->
+        <!--                                                          -->
+        <!-- The full documentation can be found at                   -->
+        <!-- http://www.j2mepolish.org                                -->
+        <!--                                                          -->
+        <!-- Have fun!                                                -->
+<project
+        name="enough-j2mepolish-example"
+        default="j2mepolish">
+
+    <!-- The wtk.home property should point to the directory      -->
+    <!-- containing the Wireless Toolkit.                         -->
+    <property file="project.properties"/>
+    <property name="wtk.home" value="${wtk.home}"/>
+    <property name="wtk.midp.version" value="MIDP-2.0"/>
+    <taskdef resource="antenna.properties"/>
+    <taskdef resource="net/sf/antcontrib/antlib.xml"/>
+    <property name="dir.dist" value="dist"/>
+    <!-- The polish.home property should point to the directory   -->
+    <!-- containing the J2ME Polish installation.                 -->
+    <property name="polish.home" value="${polish.home}"/>
+    <echo message="${polish.home}"/>
+    <property name="application.name" value="di"/>
+    <!-- The siemens.home, nokia.home and motorola.home-          -->
+    <!-- properties can be necessary when their emulators         -->
+    <!-- should be started.                                       -->
+    <!-- The directory which contains the Siemens-SMTK
+        <property name="siemens.home" value="C:\siemens" />
+    -->
+    <!-- The directory which contains the Nokia-emulators
+        <property name="nokia.home" value="C:\Nokia" />
+    -->
+    <!-- The path to the Sony-Ericsson SDK
+        <property name="sony-ericsson.home" value="C:\SonyEricsson\J2ME_SDK" />
+    -->
+    <!-- The directory which contains the Motorola-emulators
+        <property name="motorola.home" value="C:\Program Files\Motorola\SDK v4.3 for J2ME" />
+    -->
+
+
+    <!-- Definition of the J2ME Polish task:                      -->
+
+    <fileset dir="${polish.home}/import" id="appjars">
+        <include name="*.jar"/>
+    </fileset>
+
+    <!-- Definition of the J2ME Polish task:                      -->
+    <!--<taskdef name="j2mepolish"-->
+    <!--classname="de.enough.polish.ant.PolishTask"-->
+    <!--classpath="${polish.home}/lib/enough-j2mepolish-build.jar:${polish.home}/lib/jdom.jar:${polish.home}/import/proguard.jar:${polish.home}/yguard-lib.jar:${wtk.home}/wtklib/kenv.zip"-->
+    <!--/>-->
+    <taskdef name="j2mepolish"
+             classname="de.enough.polish.ant.PolishTask"
+             classpath="${polish.home}/import/midp2.jar:${polish.home}/lib/enough-j2mepolish-client.jar:${polish.home}/lib/enough-j2mepolish-build.jar:${polish.home}/lib/jdom.jar:${polish.home}/import/proguard.jar:${polish.home}/yguard-lib.jar:${wtk.home}/wtklib/kenv.zip"/>
+
+    <!--<taskdef name="j2mepolish"-->
+    <!--classname="de.enough.polish.ant.PolishTask"-->
+    <!--classpath="${polish.home}/import/midp2.jar:${polish.home}/import/enough-j2mepolish-build.jar:${polish.home}/import/jdom.jar:${polish.home}/import/proguard.jar:${polish.home}/yguard-lib.jar:${wtk.home}/wtklib/kenv.zip"/>-->
+
+    <!--${polish.home}/import/midp2.jar:${polish.home}/import/enough-j2mepolish-build.jar:${polish.home}/import/jdom.jar:${polish.home}/import/proguard.jar:${polish.home}/yguard-lib.jar:${wtk.home}/wtklib/kenv.zip-->
+    <!-- build targets, each target can be called via "ant [name]",
+      e.g. "ant clean", "ant test j2mepolish" or just "ant" for calling the default-target -->
+
+    <target name="setdeploy"
+            description="Call this target first to set the OTA download-URL, e.g. ant setdeploy j2mepolish"
+            >
+        <property name="deploy-url" value="http://www.company.com/download/"/>
+    </target>
+
+    <target name="test"
+            description="Call this target first to skip the obfuscation step, e.g. ant test j2mepolish"
+            >
+        <property name="test" value="true"/>
+        <property name="dir.work" value="build/test"/>
+    </target>
+
+    <target name="init">
+        <!--<property name="test" value="false" />-->
+        <property name="dir.work" value="build/real"/>
+        <property name="deploy-url" value=""/>
+    </target>
+
+    <!-- In this target the J2ME Polish task is used.             -->
+    <!-- It has 3 sections:                                       -->
+    <!--    1. The info-section defines some general information  -->
+    <!--    2. The deviceRequirements-section chooses the devices -->
+    <!--       for which the application is optimized.            -->
+    <!--    3. The build-section controls the actual build        -->
+    <!--       process.                                           -->
+
+    <target name="run" depends="j2mepolish"
+            description="Runs the Default color emulator. To run another emulator, use the option -Demulator=EmulatorName">
+        <property name="emulator" value="DefaultColorPhone"/>
+        <wtkrun jadfile="./dist/${application.name}.jad" device="${emulator}"/>
+    </target>
+
+    <!--<target name="run-test" depends="j2mepolish-test"-->
+            <!--description="Runs the Default color emulator. To run another emulator, use the option -Demulator=EmulatorName">-->
+        <!--<property name="emulator" value="DefaultColorPhone"/>-->
+        <!--<wtkrun jadfile="./dist/${application.name}.jad" device="${emulator}"/>-->
+    <!--</target>-->
+
+
+    <target name="clean"
+            description="allows a clean build. You should call [ant clean] whenever you made changes to devices.xml, vendors.xml or groups.xml">
+        <delete dir="./build"/>
+        <delete dir="./dist"/>
+    </target>
+
+
+    <target name="j2mepolish"
+            depends="clean,init"
+            description="This is the controller for the J2ME build process."
+            >
+        <j2mepolish>
+            <!-- general settings, these settings basically form the JAD-attributes. -->
+            <!-- Have a look at the <jad>-section for setting specialised attributes.
+                    You can also define localized attributes in the resources/messages.txt files -->
+            <info
+                    license="Freeware"
+                    name="DI Beta 2.0.0 - SC"
+                    version="2.0.0"
+                    description="Dark Inspiration (Multi-Player)"
+                    vendorName="CSE"
+                    infoUrl="http://www.jcage.hostjava.net/wap"
+                    icon="op.png"
+                    jarName="${application.name}.jar"
+                    copyright="Copyright 2008 DI. All rights reserved."
+                    deleteConfirm="Do you really want to kill me?"
+                    />
+            <!-- selection of supported devices -->
+            <!-- In the test mode the application is build only for the  -->
+            <!-- Generic/midp1 phone, but when the test-property is set to false, -->
+            <!-- the second deviceRequirements will be used instead. -->
+            <deviceRequirements>
+                <!--<requirement name="Identifier" value="Sony-Ericsson/K800i,Sony-Ericsson/W300" />-->
+                <requirement name="Identifier" value="Generic/midp2"/>
+            </deviceRequirements>
+            <!--<deviceRequirements unless="test">-->
+            <!--<requirement name="Identifier" value="Generic/jtwi,Generic/midp1,Generic/Midp2Cldc11,Nokia/Series40E3,Nokia/Series60E2,Nokia/Series60E3,Sony-Ericsson/JavaPlatform6" />-->
+            <!-- on could use other devices for real builds, e.g. :
+                   <or>
+                       <and>
+                           <requirement name="JavaPackage" value="nokia-ui" />
+                           <requirement name="BitsPerPixel" value="16+" />
+                       </and>
+                   </or>
+                    -->
+            <!--</deviceRequirements>-->
+            <!-- build settings -->
+            <!--
+                -->
+            <build
+                    symbols="ExampleSymbol, AnotherExample"
+                    sourceDir="../src"
+                    usePolishGui="true"
+                    fullscreen="menu"
+                    workDir="./${dir.work}"
+                    binaryLibrary="">
+
+                <!-- midlets definition -->
+                <midlet class="dev.di.main.MainMid" name="J-Cage"/>
+                <!-- project-wide variables - used for preprocessing.  -->
+                <!-- You can set localized variables in the resources/messages.txt files as well.  -->
+                <variables includeAntProperties="true">
+                    <variable name="polish.TextField.useDirectInput" value="false"/>
+                    <variable name="polish.TextField.supportSymbolsEntry" value="true"/>
+                    <variable name="polish.MenuBar.useExtendedMenuBar" value="true"/>
+                    <variable name="polish.useScrollBar" value="true"/>
+                    <variable name="polish.ScreenInfo.enable" value="true"/>
+
+                    <variable name="polish.GameCanvas.useFullScreen" value="true"/>
+                    <variable name="polish.TiledLayer.splitImage" value="true"/>
+                </variables>
+                <!-- Here you can set the dir attribute to "resources2" for an alternative design. -->
+                <resources
+                        dir="../res"
+                        defaultexcludes="yes"
+                        excludes="readme.txt"
+                        >
+                    <!-- add the localization element for created localized
+                              versions of your application:
+                         <localization locales="de_DE, en_US" unless="test" />
+                         <localization locales="en_US" if="test" />
+                         -->
+                </resources>
+                <!-- obfuscator settings: do not obfuscate when the test-property is true -->
+                <obfuscator name="ProGuard" useDefaultPackage="true">
+                    <parameter name="optimize" value="true"/>
+                </obfuscator>
+                <!-- debug settings: only include debug setting when the test-property is true -->
+                <!--<debug if="test" showLogOnError="true" verbose="true" level="error">-->
+                <!--<filter pattern="de.enough.polish.example.*" level="debug" />-->
+                <!--<filter pattern="de.enough.polish.ui.*" level="warn" />-->
+                <!--</debug>-->
+                <!-- user defined JAD attributes can also be used: -->
+                <jad>
+                    <!--<attribute name="Nokia-MIDlet-Category" value="Game" if="polish.group.Series40"/>-->
+                </jad>
+            </build>
+
+
+        </j2mepolish>
+    </target>
+</project>

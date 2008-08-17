@@ -1,0 +1,10 @@
+MIDlet-Name: DI Beta 2.0.0 - SC
+MIDlet-Version: 2.0.0
+MIDlet-Vendor: CSE
+MIDlet-Jar-URL: di.jar
+MIDlet-Jar-Size: 257113
+MIDlet-Description: A localized sample project
+MIDlet-Icon: /op.png
+MIDlet-Info-URL: http://www.jcage.hostjava.net/wap
+MIDlet-1: J-Cage,/op.png,MainMid
+MIDlet-Delete-Confirm: Do you really want to kill me?
